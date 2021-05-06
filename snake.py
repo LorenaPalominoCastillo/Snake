@@ -6,6 +6,12 @@ from turtle import *
 from random import randrange
 from freegames import square, vector
 import random
+
+serpiente = ["blue","yellow","green","orange","magenta"]
+Colors = random.choice(serpiente)
+comida = ["blue","yellow","green","orange","magenta"]
+Colorc = random.choice(comida)
+
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
@@ -57,6 +63,7 @@ def move():
 
     for i in food:
         square(food.x, food.y, 9, (Colorc))
+
 
     update()
     ontimer(move, 100)
